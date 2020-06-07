@@ -24,6 +24,7 @@ if [ -d "$1" ]; then
           * ) echo "Please select a correct answer";;
       esac
     done
+   fi
 else
   # Directory to cache doesn't exist
   echo "Error: ${1} not found"
