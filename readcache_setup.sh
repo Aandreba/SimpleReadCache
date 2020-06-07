@@ -9,8 +9,10 @@
 
 if [ -d "$1" ]; then
   # Directory to cache exists
+  echo "Directory '${1}' found"
   if [ -d "$2" ]; then
     # Caching directory exists
+    echo "Directory '${2}' found"
   else
     # Caching directory doesn't exist
     echo "Warning: '${2} not found"
