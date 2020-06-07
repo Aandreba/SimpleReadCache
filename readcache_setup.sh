@@ -9,15 +9,15 @@
 
 if [ -d "$1" ]; then
   # Directory to cache exists
-  echo "Directory '${1}' found"
+  echo "Directory ${1} found"
   if [ -d "$2" ]; then
     # Caching directory exists
-    echo "Directory '${2}' found"
+    echo "Directory ${2} found"
   else
     # Caching directory doesn't exist
-    echo "Warning: '${2} not found"
+    echo "Warning: ${2} not found"
     while true; do
-      read -p "Create directory '${2}'? (y/n) " yn
+      read -p "Create directory ${2}? (y/n) " yn
       case $yn in
           [Yy]* ) mkdir $2; break;;
           [Nn]* ) exit 1;;
@@ -26,6 +26,6 @@ if [ -d "$1" ]; then
     done
 else
   # Directory to cache doesn't exist
-  echo "Error: '${1}' not found"
+  echo "Error: ${1} not found"
   exit 1
 fi
